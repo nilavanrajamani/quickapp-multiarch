@@ -1,0 +1,6 @@
+QuickApp/bin/
+QuickApp/obj/
+QuickApp/ClientApp/node_modules/
+dockerfile
+.dockerignore
+docker-compose.yml

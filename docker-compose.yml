@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+    web:
+        build:
+            context: .
+        image: nilavanrajamani/quickapp:sqldepend
+        ports:
+            - "5000:5000"
+        depends_on:
+            - db
+    db:
+        image: "microsoft/mssql-server-linux:latest"
+        ports:
+            - "1433:1433"
+        environment:
+            SA_PASSWORD: "MyPass@word"
+            ACCEPT_EULA: "Y"
